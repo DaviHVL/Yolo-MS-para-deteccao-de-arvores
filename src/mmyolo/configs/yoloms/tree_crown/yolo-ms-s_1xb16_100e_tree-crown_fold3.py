@@ -29,7 +29,7 @@ train_dataloader = dict(
     dataset=dict(
         data_root=data_root,
         metainfo=metainfo,
-        ann_file='annotations/fold_0/instances_train.json',
+        ann_file='annotations/fold_3/instances_train.json',
         data_prefix=dict(img='rgb/'),
     )
 )
@@ -40,7 +40,7 @@ val_dataloader = dict(
     dataset=dict(
         data_root=data_root,
         metainfo=metainfo,
-        ann_file='annotations/fold_0/instances_val.json',
+        ann_file='annotations/fold_3/instances_val.json',
         data_prefix=dict(img='rgb/'),
         test_mode=True
     )
@@ -52,7 +52,7 @@ test_dataloader = dict(
     dataset=dict(
         data_root=data_root,
         metainfo=metainfo,
-        ann_file='annotations/fold_0/instances_test.json',
+        ann_file='annotations/fold_3/instances_test.json',
         data_prefix=dict(img='rgb/'),
         test_mode=True
     )
@@ -66,7 +66,7 @@ train_cfg = dict(
 
 val_evaluator = dict(
     type='mmdet.CocoMetric',
-    ann_file=data_root + 'annotations/fold_0/instances_val.json',
+    ann_file=data_root + 'annotations/fold_3/instances_val.json',
     metric='bbox',
     format_only=False,
     classwise=True,
@@ -74,7 +74,7 @@ val_evaluator = dict(
 
 test_evaluator = dict(
     type='mmdet.CocoMetric',
-    ann_file=data_root + 'annotations/fold_0/instances_test.json',
+    ann_file=data_root + 'annotations/fold_3/instances_test.json',
     metric='bbox',
     format_only=False,
     classwise=True,
