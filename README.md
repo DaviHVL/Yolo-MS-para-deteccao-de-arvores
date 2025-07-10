@@ -73,6 +73,7 @@ Yolo-MS-para-deteccao-de-arvores/
 │                   ├── yolo-ms-s_1xb16_100e_tree-crown_fold0.py
 │                   └── yoloms-xs_pre_trained.pth  
 │   ...
+├── Projeto2_IIA_IEEE.pdf  # Artigo, no formato IEEE, do Projeto 
 └── README.md              
 ```
 
@@ -102,6 +103,8 @@ Cada pasta contém três arquivos:
 - `instances_train.json` — imagens de treino
 - `instances_val.json` — imagens de validação
 - `instances_test.json` — imagens de teste
+
+Cada fold utilizado no processo de validação cruzada **representa uma divisão distinta dos dados em subconjuntos de treinamento, validação e teste**. É importante destacar que, neste projeto, **cada fold não corresponde a uma partição isolada dos dados originais, mas sim a uma divisão completa e independente do conjunto de dados em três conjuntos complementares (train, val e test)**, com diferentes amostras em cada um. Ou seja, os folds não são subconjuntos mutuamente exclusivos, mas sim diferentes formas de particionar o dataset completo para avaliar a capacidade de generalização do modelo em múltiplos cenários de separação dos dados.
 
 3. **Configurações para Treinamento com MMYOLO**
 
